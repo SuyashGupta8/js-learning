@@ -1,7 +1,8 @@
 //:::::Notes::::
 // call, apply & bind are used to bind external object to a different object of function
 function learn(name, lname, clas, add){
-    console.log("my name is "+  name + " "+ lname + " my class is "+ clas + " my aaddress ", add + "with " + this.buddy + " all ");
+    this.friends = true;
+    console.log("my name is "+  name + " "+ lname + " my class is "+ clas + " my aaddress ", add + "with " + this.buddy + " all " + this.friends);
 }
 
 let objc = {"buddy": "friends"};
@@ -25,3 +26,5 @@ learn.apply(objc, arr);
 let bnd = learn.bind(objc);
 bnd( "suyash", "gupta", "half infinity", "123");
 
+
+//getNextStats
